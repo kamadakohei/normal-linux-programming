@@ -4,11 +4,11 @@
 #include <fcntl.h>
 
 static void do_cat(const char *path);
+
 static void die(const char *s);
 
 int
-main(int argc, char *argv[])
-{
+main(int argc, char *argv[]) {
     int i;
 
     if (argc < 2) {
@@ -24,8 +24,7 @@ main(int argc, char *argv[])
 #define  BUFFER_SIZE 2048
 
 static void
-do_cat(const char *path)
-{
+do_cat(const char *path) {
     int fd;
     unsigned char buf[BUFFER_SIZE];
     int n;
@@ -42,8 +41,7 @@ do_cat(const char *path)
 }
 
 static void
-die(const char *s)
-{
+die(const char *s) {
     perror(s);
     exit(1);
 }

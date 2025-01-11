@@ -26,7 +26,7 @@ do_wc(const char *path) {
     int fd;
     unsigned char buf[BUFFER_SIZE];
     ssize_t n;
-    int count = 0;
+    unsigned long count = 0;
 
     fd = open(path, O_RDONLY);
     if (fd < 0) die(path);

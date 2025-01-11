@@ -41,7 +41,7 @@ do_wc(const char *path) {
         }
     }
     if (close(fd) < 0) die(path);
-    printf("%s: %d\n", path, count);
+    printf("%s: %lu\n", path, count);
 }
 
 static void
